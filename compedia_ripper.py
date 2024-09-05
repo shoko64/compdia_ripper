@@ -73,10 +73,10 @@ def main():
             print(f"Exporting file: {corrected_curr_path}/{curr_file_name}")
             try:
                 curr_file.write(curr_data)
+                file_counter = file_counter + 1
             except Exception as exception:
                 print(f"Failed to export file {corrected_curr_path}/{curr_file_name}: {exception}")
 
-        file_counter = file_counter + 1
         index = index + curr_file_name_size + curr_path_size + POINTER_HEADER_SIZE
 
     file.close()
